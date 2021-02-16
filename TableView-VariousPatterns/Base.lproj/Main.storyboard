@@ -16,19 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yF-fH-sxj">
-                                <rect key="frame" x="116" y="160" width="182" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="goFirstTableView"/>
-                                <connections>
-                                    <action selector="tapGoFirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsx-eX-tWN"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iKv-4o-6JP">
+                                <rect key="frame" x="50" y="138" width="314" height="674"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yF-fH-sxj">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="674"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="goFirstTableView"/>
+                                        <connections>
+                                            <action selector="tapGoFirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsx-eX-tWN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iKv-4o-6JP" secondAttribute="trailing" constant="50" id="4lE-Gu-FPY"/>
+                            <constraint firstItem="iKv-4o-6JP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="9xA-uK-1Pf"/>
+                            <constraint firstItem="iKv-4o-6JP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ahQ-ye-uT6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iKv-4o-6JP" secondAttribute="bottom" constant="50" id="kBg-Jw-oWh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="j0D-Zg-sOT"/>
                     <connections>
