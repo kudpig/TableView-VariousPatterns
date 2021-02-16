@@ -10,7 +10,7 @@ import UIKit
 class FirstTableView: UIViewController, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
-    let data = ["First", "Second"]
+    let data = ["First", "Second", "Third", "Another", "More"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
