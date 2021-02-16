@@ -15,7 +15,7 @@ class FirstTableView: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(MyFirstTableViewCell.nib(), forCellReuseIdentifier: MyFirstTableViewCell.identifier)
         table.dataSource = self
     
     }
@@ -25,8 +25,8 @@ class FirstTableView: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: MyFirstTableViewCell.identifier, for: indexPath) as! MyFirstTableViewCell
+        cell.configure(with: data[indexPath.row])
         return cell
     }
     
