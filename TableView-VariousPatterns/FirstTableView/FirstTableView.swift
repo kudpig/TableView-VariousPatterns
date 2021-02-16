@@ -7,23 +7,39 @@
 
 import UIKit
 
-class FirstTableView: UIViewController {
-
+class FirstTableView: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet var table: UITableView!
+    let data = ["First", "Second", "Third", "Another", "More"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        table.register(MyFirstTableViewCell.nib(), forCellReuseIdentifier: MyFirstTableViewCell.identifier)
+        table.dataSource = self
+    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
     }
-    */
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MyFirstTableViewCell.identifier,
+                                                 for: indexPath) as! MyFirstTableViewCell
+        cell.configure(with: data[indexPath.row])
+        
+        cell.delegate = self
+        return cell
+    }
+    
+}
+
+
+extension FirstTableView: MyFirstTableViewCellDelegate {
+    
+    func didTapButton(with title: String) {
+        print("\(title)")
+    }
+    
 }

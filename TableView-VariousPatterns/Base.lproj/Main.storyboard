@@ -42,7 +42,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="j0D-Zg-sOT"/>
                     <connections>
-                        <segue destination="6Bh-ja-wha" kind="show" identifier="goFirst" id="W5T-fB-Sla"/>
+                        <segue destination="l2v-Z7-UKX" kind="show" identifier="goFirst" id="JUo-7i-jP6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -50,14 +50,14 @@
             <point key="canvasLocation" x="1050.7246376811595" y="93.75"/>
         </scene>
         <!--FirstTableView-->
-        <scene sceneID="pcX-rV-JOE">
+        <scene sceneID="enD-eM-P1c">
             <objects>
-                <viewControllerPlaceholder storyboardName="FirstTableView" id="6Bh-ja-wha" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="qbD-Sy-EWD"/>
+                <viewControllerPlaceholder storyboardIdentifier="FirstTableView" storyboardName="FirstTableView" id="l2v-Z7-UKX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Lxh-7k-PW1"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pXr-aT-lPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fb-Vt-BLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602" y="94"/>
+            <point key="canvasLocation" x="1773" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PkI-Lw-x2r">

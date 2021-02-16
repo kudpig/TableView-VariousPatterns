@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6223BA25DBB6A8005D8F87 /* MyFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6223B825DBB6A8005D8F87 /* MyFirstTableViewCell.swift */; };
+		8F6223BB25DBB6A8005D8F87 /* MyFirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6223B925DBB6A8005D8F87 /* MyFirstTableViewCell.xib */; };
 		8FB76E0D25DB9132009BCB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB76E0C25DB9132009BCB15 /* AppDelegate.swift */; };
 		8FB76E0F25DB9132009BCB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB76E0E25DB9132009BCB15 /* SceneDelegate.swift */; };
 		8FB76E1125DB9132009BCB15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB76E1025DB9132009BCB15 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F6223B825DBB6A8005D8F87 /* MyFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstTableViewCell.swift; sourceTree = "<group>"; };
+		8F6223B925DBB6A8005D8F87 /* MyFirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFirstTableViewCell.xib; sourceTree = "<group>"; };
 		8FB76E0925DB9132009BCB15 /* TableView-VariousPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableView-VariousPatterns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB76E0C25DB9132009BCB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FB76E0E25DB9132009BCB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 			children = (
 				8FB76E2125DB9176009BCB15 /* FirstTableView.storyboard */,
 				8FB76E2525DB94BB009BCB15 /* FirstTableView.swift */,
+				8F6223B825DBB6A8005D8F87 /* MyFirstTableViewCell.swift */,
+				8F6223B925DBB6A8005D8F87 /* MyFirstTableViewCell.xib */,
 			);
 			path = FirstTableView;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 				8FB76E1625DB9134009BCB15 /* Assets.xcassets in Resources */,
 				8FB76E1425DB9132009BCB15 /* Main.storyboard in Resources */,
 				8FB76E2225DB9176009BCB15 /* FirstTableView.storyboard in Resources */,
+				8F6223BB25DBB6A8005D8F87 /* MyFirstTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +163,7 @@
 				8FB76E0D25DB9132009BCB15 /* AppDelegate.swift in Sources */,
 				8FB76E2625DB94BB009BCB15 /* FirstTableView.swift in Sources */,
 				8FB76E0F25DB9132009BCB15 /* SceneDelegate.swift in Sources */,
+				8F6223BA25DBB6A8005D8F87 /* MyFirstTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
