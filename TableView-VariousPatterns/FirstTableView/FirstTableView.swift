@@ -25,9 +25,21 @@ class FirstTableView: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MyFirstTableViewCell.identifier, for: indexPath) as! MyFirstTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MyFirstTableViewCell.identifier,
+                                                 for: indexPath) as! MyFirstTableViewCell
         cell.configure(with: data[indexPath.row])
+        
+        cell.delegate = self
         return cell
+    }
+    
+}
+
+
+extension FirstTableView: MyFirstTableViewCellDelegate {
+    
+    func didTapButton(with title: String) {
+        print("\(title)")
     }
     
 }

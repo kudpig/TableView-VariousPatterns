@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol MyFirstTableViewCellDelegate: AnyObject {
+    func didTapButton(with title: String)
+}
+
 class MyFirstTableViewCell: UITableViewCell {
+    
+    weak var delegate: MyFirstTableViewCellDelegate?
 
     static let identifier = "MyFirstTableViewCell"
     
@@ -17,12 +23,14 @@ class MyFirstTableViewCell: UITableViewCell {
     
     
     @IBOutlet var button: UIButton!
+    private var title: String = ""
     
     @IBAction func didTupButton() {
-        
+        delegate?.didTapButton(with: title)
     }
     
     func configure(with title: String) {
+        self.title = title
         button.setTitle(title, for: .normal)
     }
     
