@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    
+    @IBAction func tapGoFirst(_ sender: UIButton) {
+        performSegue(withIdentifier: "goFirst", sender: nil)
+    }
+    
 }
 
