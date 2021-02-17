@@ -33,6 +33,9 @@
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="goSecondTableView"/>
+                                        <connections>
+                                            <action selector="tapGoSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RaD-Av-GaQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -49,6 +52,7 @@
                     <navigationItem key="navigationItem" title="Home" id="j0D-Zg-sOT"/>
                     <connections>
                         <segue destination="l2v-Z7-UKX" kind="show" identifier="goFirst" id="JUo-7i-jP6"/>
+                        <segue destination="UzO-6W-yhc" kind="show" identifier="goSecond" id="hYU-oo-PBg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,6 +68,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fb-Vt-BLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1773" y="94"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="Ch7-pU-hwA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Second" id="UzO-6W-yhc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="W8a-iw-JuE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zn-fl-PlI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1817" y="206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PkI-Lw-x2r">

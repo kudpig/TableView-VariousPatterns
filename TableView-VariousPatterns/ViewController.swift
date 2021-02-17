@@ -15,8 +15,13 @@ class ViewController: UIViewController {
     }
 
     
+    // Action Funcs
     @IBAction func tapGoFirst(_ sender: UIButton) {
         performSegue(withIdentifier: "goFirst", sender: nil)
+    }
+    
+    @IBAction func tapGoSecond(_ sender: UIButton) {
+        performSegue(withIdentifier: "goSecond", sender: nil)
     }
     
 }
