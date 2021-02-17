@@ -68,6 +68,7 @@
 		8FB76E0B25DB9132009BCB15 /* TableView-VariousPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				8FF8533F25DD8E54006C3A11 /* SecondTableView */,
 				8FB76E2B25DB99F4009BCB15 /* FirstTableView */,
 				8FB76E0C25DB9132009BCB15 /* AppDelegate.swift */,
 				8FB76E0E25DB9132009BCB15 /* SceneDelegate.swift */,
@@ -76,8 +77,6 @@
 				8FB76E1525DB9134009BCB15 /* Assets.xcassets */,
 				8FB76E1725DB9134009BCB15 /* LaunchScreen.storyboard */,
 				8FB76E1A25DB9134009BCB15 /* Info.plist */,
-				8FF8533825DD89C4006C3A11 /* SecondViewController.swift */,
-				8FF8533C25DD89EA006C3A11 /* Second.storyboard */,
 			);
 			path = "TableView-VariousPatterns";
 			sourceTree = "<group>";
@@ -91,6 +90,15 @@
 				8F6223B925DBB6A8005D8F87 /* MyFirstTableViewCell.xib */,
 			);
 			path = FirstTableView;
+			sourceTree = "<group>";
+		};
+		8FF8533F25DD8E54006C3A11 /* SecondTableView */ = {
+			isa = PBXGroup;
+			children = (
+				8FF8533825DD89C4006C3A11 /* SecondViewController.swift */,
+				8FF8533C25DD89EA006C3A11 /* Second.storyboard */,
+			);
+			path = SecondTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
