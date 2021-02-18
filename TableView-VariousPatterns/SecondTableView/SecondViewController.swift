@@ -7,23 +7,44 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // Initialization Closure
+    private let secondTableView: UITableView = {
+        let table = UITableView()
+        
+        // cellファイルで設定したidから情報を取得
+        table.register(SecondSimpleTableViewCell.self, forCellReuseIdentifier: SecondSimpleTableViewCell.identifier)
+        
+        return table
+    }()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.addSubview(secondTableView)
+        secondTableView.delegate = self
+        // プロトコルのprotocol UITableViewDelegateに準拠した、TableViewクラスの、weak open var delegate: UITableViewDelegate? を使用している。
+        secondTableView.dataSource = self
+        // DataSourceを取得しないとdelegateは使用できない。
+        // プロトコルのprotocol UITableViewDataSourceに準拠した、TableViewクラスの、weak open var delegate: UITableViewDataSource? を使用している。
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        secondTableView.frame = view.bounds  // 相対的に親viewと1対1でサイズにするためboundsで設定している
     }
-    */
-
+    
+    // 以下２つのメソッドはUITableViewDataSourceに準拠されている必須項目。
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SecondSimpleTableViewCell.identifier, for: indexPath)
+        cell.textLabel?.text = "Hello World"
+        
+        return cell
+    }
 }

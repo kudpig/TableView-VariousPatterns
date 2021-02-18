@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F52652F25DECC2D007F0FB6 /* SecondSimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F52652E25DECC2D007F0FB6 /* SecondSimpleTableViewCell.swift */; };
 		8F6223BA25DBB6A8005D8F87 /* MyFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6223B825DBB6A8005D8F87 /* MyFirstTableViewCell.swift */; };
 		8F6223BB25DBB6A8005D8F87 /* MyFirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6223B925DBB6A8005D8F87 /* MyFirstTableViewCell.xib */; };
 		8FB76E0D25DB9132009BCB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB76E0C25DB9132009BCB15 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F52652E25DECC2D007F0FB6 /* SecondSimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSimpleTableViewCell.swift; sourceTree = "<group>"; };
 		8F6223B825DBB6A8005D8F87 /* MyFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstTableViewCell.swift; sourceTree = "<group>"; };
 		8F6223B925DBB6A8005D8F87 /* MyFirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFirstTableViewCell.xib; sourceTree = "<group>"; };
 		8FB76E0925DB9132009BCB15 /* TableView-VariousPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableView-VariousPatterns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 			children = (
 				8FF8533825DD89C4006C3A11 /* SecondViewController.swift */,
 				8FF8533C25DD89EA006C3A11 /* Second.storyboard */,
+				8F52652E25DECC2D007F0FB6 /* SecondSimpleTableViewCell.swift */,
 			);
 			path = SecondTableView;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF8533925DD89C4006C3A11 /* SecondViewController.swift in Sources */,
+				8F52652F25DECC2D007F0FB6 /* SecondSimpleTableViewCell.swift in Sources */,
 				8FB76E1125DB9132009BCB15 /* ViewController.swift in Sources */,
 				8FB76E0D25DB9132009BCB15 /* AppDelegate.swift in Sources */,
 				8FB76E2625DB94BB009BCB15 /* FirstTableView.swift in Sources */,
