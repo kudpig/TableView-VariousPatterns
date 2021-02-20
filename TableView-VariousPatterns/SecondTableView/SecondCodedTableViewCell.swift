@@ -8,16 +8,40 @@
 import UIKit
 
 class SecondCodedTableViewCell: UITableViewCell {
+    
+    static let identifire = "SecondCodedTableViewCell"
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    let myLabel: UILabel = {
+        let label = UILabel()
+        
+        return label
+    }()
+    
+    let myImageView: UIImageView = {
+        let imageView = UIImageView()
+        
+        return imageView
+    }()
+    
+    
+    public func configure() {
+        contentView.addSubview(myLabel)
+        contentView.addSubview(myImageView)
+        
+        myLabel.text = "It works"
+        myLabel.textAlignment = .center
+        myImageView.image = UIImage(named: "Image2")
+        myImageView.contentMode = .scaleAspectFill
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    override func layoutSubviews() {
+        super .layoutSubviews()
+        
+        myImageView.frame = CGRect(x: 5, y: 5, width: 50, height: 50)
+        myLabel.frame = CGRect(x: 55, y: 5, width: contentView.frame.size.width - 55, height: 50)
+        
+        myImageView.layer.masksToBounds = true
+        myImageView.layer.cornerRadius = 50
     }
-
+    
 }

@@ -18,6 +18,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         table.register(SecondImageTableViewCell.nib(), forCellReuseIdentifier: SecondImageTableViewCell.identifier)
         
+        table.register(SecondCodedTableViewCell.self, forCellReuseIdentifier: SecondCodedTableViewCell.identifire)
+        
         return table
     }()
 
@@ -41,11 +43,17 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // 以下２つのメソッドはUITableViewDataSourceに準拠されている必須項目。
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 15
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row < 5 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: SecondCodedTableViewCell.identifire, for: indexPath) as! SecondCodedTableViewCell
+            cell.configure()
+            return cell
+        }
+        
+        if indexPath.row < 10 {
             // show image cell
             let cell = tableView.dequeueReusableCell(withIdentifier: SecondImageTableViewCell.identifier, for: indexPath) as! SecondImageTableViewCell
             //          ↑tableView: UITableView　はconfigureメソッドを持っていないので、SecondImageTableViewCellクラスにダウンキャストさせる
@@ -56,7 +64,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: SecondSimpleTableViewCell.identifier, for: indexPath)
         cell.textLabel?.text = "Hello World"
-        
         return cell
     }
+    
 }
