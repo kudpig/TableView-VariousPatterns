@@ -16,6 +16,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // cellファイルで設定したidから情報を取得
         table.register(SecondSimpleTableViewCell.self, forCellReuseIdentifier: SecondSimpleTableViewCell.identifier)
         
+        table.register(SecondImageTableViewCell.nib(), forCellReuseIdentifier: SecondImageTableViewCell.identifier)
+        
         return table
     }()
 
@@ -42,6 +44,16 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row < 5 {
+            // show image cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: SecondImageTableViewCell.identifier, for: indexPath) as! SecondImageTableViewCell
+            //          ↑tableView: UITableView　はconfigureメソッドを持っていないので、SecondImageTableViewCellクラスにダウンキャストさせる
+            cell.configure(with: "Image1")
+            // configureはSecondImageTableViewCellクラスで定義
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: SecondSimpleTableViewCell.identifier, for: indexPath)
         cell.textLabel?.text = "Hello World"
         
