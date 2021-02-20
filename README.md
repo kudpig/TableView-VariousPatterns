@@ -3,7 +3,7 @@
 
 ## Storyboardの分割
 TableViewごとにStoryboardを分けた。
-(画像準備中)
+[![Image from Gyazo](https://i.gyazo.com/b8a822b37b2ce3bbf34406173c0b9f28.png)](https://gyazo.com/b8a822b37b2ce3bbf34406173c0b9f28)
 
 ## TableView with Delegate-ButtonAction
 [![Image from Gyazo](https://i.gyazo.com/e12bb552dbd6118295b358ba1fc48e37.png)](https://gyazo.com/e12bb552dbd6118295b358ba1fc48e37)
