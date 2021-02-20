@@ -14,10 +14,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let table = UITableView()
         
         // cellファイルで設定したidから情報を取得
+        // 1. Simple
         table.register(SecondSimpleTableViewCell.self, forCellReuseIdentifier: SecondSimpleTableViewCell.identifier)
-        
+        // 2. xib
         table.register(SecondImageTableViewCell.nib(), forCellReuseIdentifier: SecondImageTableViewCell.identifier)
-        
+        // 3. Coded
         table.register(SecondCodedTableViewCell.self, forCellReuseIdentifier: SecondCodedTableViewCell.identifire)
         
         return table
